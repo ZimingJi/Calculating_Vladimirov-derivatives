@@ -1,0 +1,106 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3184,         98]
+NotebookOptionsPosition[      2623,         78]
+NotebookOutlinePosition[      2979,         94]
+CellTagsIndexPosition[      2936,         91]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+This notebook is just here to help TeXing. Computing and simplifying p-adic \
+integrals cannot be done here for now.\
+\>", "Section",
+ CellChangeTimes->{{3.747062642604344*^9, 3.747062652776132*^9}, {
+  3.7470627833993006`*^9, 3.7470629071578884`*^9}, {3.747062937157906*^9, 
+  3.747062939574519*^9}},ExpressionUUID->"c8be5985-43bd-48ac-ac62-\
+5d08534e411c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     FractionBox["1", "p"]}], ")"}], "*", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     SuperscriptBox["p", 
+      RowBox[{"l", " ", "s"}]], ",", 
+     RowBox[{"{", 
+      RowBox[{"l", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", 
+       RowBox[{"n", "-", "m", "-", "1"}]}], "}"}]}], "]"}]}], "//", 
+  "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.7470606275299006`*^9, 3.7470606532311893`*^9}, {
+   3.7470608574159856`*^9, 3.747060871701517*^9}, {3.747060915690873*^9, 
+   3.7470609185918074`*^9}, {3.7470629672169676`*^9, 3.747063137641694*^9}, {
+   3.7470633722268376`*^9, 3.7470633957805514`*^9}, 3.747063444515077*^9, {
+   3.747063484743923*^9, 3.7470635037806234`*^9}, {3.7470744798423834`*^9, 
+   3.747074481475977*^9}, {3.747074580086299*^9, 3.7470745817229815`*^9}, {
+   3.7470746229599733`*^9, 3.747074623116229*^9}},
+ CellLabel->"In[85]:=",ExpressionUUID->"0aadf56e-86db-4ee9-809f-76ac3bb7480a"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", "p"}], ")"}], " ", 
+   SuperscriptBox["p", 
+    RowBox[{
+     RowBox[{"-", "1"}], "-", 
+     RowBox[{"m", " ", "s"}], "+", 
+     RowBox[{"n", " ", "s"}]}]]}], 
+  RowBox[{
+   RowBox[{"-", "1"}], "+", 
+   SuperscriptBox["p", "s"]}]]], "Output",
+ CellChangeTimes->{{3.7470608632178545`*^9, 3.7470608723969803`*^9}, 
+   3.7470609193253007`*^9, 3.747063445808936*^9, 3.747063504055806*^9, 
+   3.7470744824295053`*^9, 3.747074582113624*^9, 3.747074624196701*^9},
+ CellLabel->"Out[85]=",ExpressionUUID->"47269232-5cb6-4907-9f24-58c785f76e0f"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{775, 872},
+WindowMargins->{{564, Automatic}, {Automatic, 54}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (2018\:5e743\:67086\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 368, 7, 105, "Section",ExpressionUUID->"c8be5985-43bd-48ac-ac62-5d08534e411c"],
+Cell[CellGroupData[{
+Cell[973, 33, 985, 22, 63, "Input",ExpressionUUID->"0aadf56e-86db-4ee9-809f-76ac3bb7480a"],
+Cell[1961, 57, 634, 17, 54, "Output",ExpressionUUID->"47269232-5cb6-4907-9f24-58c785f76e0f"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

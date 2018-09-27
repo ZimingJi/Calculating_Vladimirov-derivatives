@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+\title{Calculating Vladimirov derivatives}
+\author{Ziming Ji}
+ 
+\maketitle
+ 
+\begin{section}{Derivative of the $\chi$ character}
+It seems to me that there are two ways to do the calculation: one is to split $\mathbb{Q}_p$ into different domains($\xi \mathbb{U}_p$) and do the integral of $\chi$; the other is to decompose the $\chi$ character function into piece-wise constant functions $\gamma_n$ and apply the V-derivatives on them.
+
+\begin{paragraph}{a) Splitting $\mathbb{Q}_p$}
+
+\begin{equation}
+D^s_y \chi(k_n y)=\frac{1}{\Gamma_p (-s)} \int\limits _{\mathbb{Q}_p}dx \frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{|x-p^{n-m}y_0|_p^{1+s}}
+\end{equation}
+Where $k_n=p^{-n}$ and $y=p^{n-m} y_0$ with $m\geq 1$(other wise $\chi$ will be a constant function and the derivative is zero).\\
+Consider the integral in each $x\in p^l \mathbb{U}_p$ block and we here discuss 2 cases:\\
+First, for$l<n-m$,we have $|x-y|_p=|x|_p=p^{-l}$ and the integral becomes:
+\begin{equation}
+\begin{split}
+\frac{1}{\Gamma_p(-s)}\int\limits _{\mathbb{Q}_p}dx \frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{|x|_p^{1+s}}
+&= \frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} \int\limits _{p^l \mathbb{U}_p}dx \frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{p^{-l(1+s)}} \\
+&= \frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} \int\limits _{p^{l-n} \mathbb{U}_p}dz |p^n|_p \frac{\chi(z) - \chi( p^{-m}y_0)}{p^{-l(1+s)}} \\
+&= \frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} p^{-n} \frac{0 - \chi( p^{-m}y_0)}{p^{-l(1+s)}} (1-\frac{1}{p}) |p^{l+n}|_p \\
+&= \frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} - \chi( p^{-m}y_0)(1-\frac{1}{p})p^{ls}\\
+&= \frac{- \chi( p^{-m}y_0)}{\Gamma_p(-s)} \frac{p-1}{p^s-1} p^{s(n-m)-1}.
+\end{split}
+\end{equation}
+The second case, $l\geq n-m$, is more complicated. 
+
+\end{paragraph}
+
+\end{section}
+
+\end{document}
