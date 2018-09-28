@@ -37,20 +37,32 @@ It seems to me that there are two ways to do the calculation: one is to split $\
 D^s_y \chi(k_n y)=\frac{1}{\Gamma_p (-s)} \int\limits _{\mathbb{Q}_p}dx \frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{|x-p^{n-m}y_0|_p^{1+s}}
 \end{equation}
 Where $k_n=p^{-n}$ and $y=p^{n-m} y_0$ with $m\geq 1$(other wise $\chi$ will be a constant function and the derivative is zero).\\
-Consider the integral in each $x\in p^l \mathbb{U}_p$ block and we here discuss 2 cases:\\
-First, for$l<n-m$,we have $|x-y|_p=|x|_p=p^{-l}$ and the integral becomes:
+Consider the integral in each $x\in p^l \mathbb{U}_p$ block($x=p^l x_0$ where $x_0\in \mathbb{U}_p$) and we have 3 parts:\\
+First, for $l<n-m$, we have $|x-y|_p=|x|_p=p^{-l}$ and the integral becomes:
 \begin{equation}
 \begin{split}
-\frac{1}{\Gamma_p(-s)}\int\limits _{\mathbb{Q}_p}dx \frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{|x|_p^{1+s}}
-&= \frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} \int\limits _{p^l \mathbb{U}_p}dx \frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{p^{-l(1+s)}} \\
+&\quad\frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} \int\limits _{p^l \mathbb{U}_p}dx \frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{p^{-l(1+s)}}\\\
 &= \frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} \int\limits _{p^{l-n} \mathbb{U}_p}dz |p^n|_p \frac{\chi(z) - \chi( p^{-m}y_0)}{p^{-l(1+s)}} \\
 &= \frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} p^{-n} \frac{0 - \chi( p^{-m}y_0)}{p^{-l(1+s)}} (1-\frac{1}{p}) |p^{l+n}|_p \\
 &= \frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} - \chi( p^{-m}y_0)(1-\frac{1}{p})p^{ls}\\
 &= \frac{- \chi( p^{-m}y_0)}{\Gamma_p(-s)} \frac{p-1}{p^s-1} p^{s(n-m)-1}.
 \end{split}
 \end{equation}
-The second case, $l\geq n-m$, is more complicated. 
-
+The second case, $l=n-m$, is more complicated. The derivative is:
+\begin{equation}
+\begin{split}
+&\quad\frac{1}{\Gamma_p (-s)} \int\limits _{p^{n-m}\mathbb{U}_p}dx\frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{|p^{n-m}(x_0-y_0)|_p^{1+s}}\\
+&=\frac{1}{\Gamma_p (-s)} \int\limits _{p^{n-m}\mathbb{U}_p}dx\frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{|p^{n-m}(x_0-y_0)|_p^{1+s}}
+\end{split}
+\end{equation}
+The last term, $l>n-m$, is:
+\begin{equation}
+\begin{split}
+&\quad\frac{1}{\Gamma_p (-s)} \sum_{l=n-m+1}^{\infty} \int\limits _{p^l \mathbb{U}_p}dx\frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{|p^{n-m}y_0|_p^{1+s}}\\
+&=\frac{1}{\Gamma_p (-s)} p^{(n-m)(1+s)} \sum_{l=n-m+1}^{\infty} \int\limits _{p^l \mathbb{U}_p}dx (\chi( p^{-n} x) - \chi( p^{-m}y_0))\\
+&=\frac{1}{\Gamma_p (-s)} p^{(n-m)(1+s)} \sum_{l=n-m+1}^{\infty} (\chi( p^{-n} x) - \chi( p^{-m}y_0))
+\end{split}
+\end{equation}
 \end{paragraph}
 
 \end{section}
