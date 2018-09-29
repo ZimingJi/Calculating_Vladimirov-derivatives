@@ -41,9 +41,9 @@ Useful integrals are:
 \begin{equation}
 \int\limits_{\xi \mathbb{U}_p}dx\chi(x)=|\xi|_p(\gamma_0(\xi)-\frac{1}{p}\gamma_0(p\xi))
 =\begin{cases}
-|\xi|_p(1-\frac{1}{p}),\quad \\
-2\\
-3
+|\xi|_p(1-\frac{1}{p}), &v_p(\xi)\geq 0\\
+-1,  &v_p(\xi) = -1\\
+0,  &v_p(\xi)\leq -1
 \end{cases}
 \end{equation}
 Consider the integral in each $x\in p^l \mathbb{U}_p$ block($x=p^l x_0$ where $x_0\in \mathbb{U}_p$) and we have 3 parts:\\
@@ -57,7 +57,21 @@ First, for $l<n-m$, we have $|x-y|_p=|x|_p=p^{-l}$ and the integral becomes:
 &= \frac{- \chi( p^{-m}y_0)}{\Gamma_p(-s)} \frac{p-1}{p^s-1} p^{s(n-m)-1}.
 \end{split}
 \end{equation}
-The second part, $l=n-m$, is more complicated. The derivative is:
+The second part, $l=n-m$, is more complicated. Note that $\mathbb{U}_p=\{a_0\}+p\mathbb{Z}_p$, where $a_0$ is the first digit of numbers in $\mathbb{U}_p$. So we can do integrals in this way as well: 
+\begin{equation}
+\int\limits_{\mathbb{U}_p}dy=|\{a_0\}|\times\int\limits_{p\mathbb{Z}_p}dx=(p-1)|p|_p=1-\frac{1}{p}.
+\end{equation} 
+In this sense we can do the splitting infinitely as $p^{n-m}(\{a_0\}+\{a_1\}+\{a_2\}+\{a_3\}+...+\{a_{n-1}\}+p^n\mathbb{Z}_p)$, and the integral is equal to$(p-1)p^{n-1}|p^n|_p=1-\frac{1}{p}$ correctly. \\
+\\Thus the integral region $p^{n-m}\mathbb{U}_p$ can be split into $p^{n-m}(\{a_0\}+\{a_1\}+\{a_2\}+\{a_3\}+...+\{a_{n-1}\}+p^n\mathbb{Z}_p)$. For a given $y_0\in\mathbb{U}_p$ and all $x_0\in\mathbb{U}_p$, there is 1 case where they have the same first digit(where $|x_0-y_0|_p$ is determined by following digits) and $p-2$ cases where they have different first digits(where $|x_0-y_0|_p=1$) ; there is 1 case where they have the same second digit(where $|x_0-y_0|_p$ is determined by following digits) and $p-1$ cases where they have different second digits(where $|x_0-y_0|_p=p^{-1}$); there is 1 case where they have the same third digit(where $|x_0-y_0|_p$ is determined by following digits) and $p-1$ cases where they have different third digits(where $|x_0-y_0|_p=p^{-2}$);...Continue this spiting till $n\to\infty$ and we should obtain the summation form of the integral. \\
+\\Note that here different digits are weighted by $\chi(p^{-n}x)=\chi(p^{-m}x_0)$ and the summation is trickier. Consider for example for a \textbf{particular} first digit of $x_0$, $a_0$. Without any pre-factor and constant term, the integral is:
+\begin{equation}
+\begin{split}
+\quad \int\limits_{p\mathbb{Z}_p}dx_0\frac{\chi(p^{-m}(a_0+a_1 p+...))}{|x_0-y_0|_p^{1+s}} \\
+&=\int\limits_{\mathbb{Z}_p}dx_1\chi(p^{-m}a_0)\chi(p^{-m+1}x_1)\\
+&=
+\end{split}
+\end{equation} 
+The derivative is:
 \begin{equation}
 \begin{split}
 &\quad\frac{1}{\Gamma_p (-s)} \int\limits _{p^{n-m}\mathbb{U}_p}dx\frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{|p^{n-m}(x_0-y_0)|_p^{1+s}}\\
