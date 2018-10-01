@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+\title{Calculating Vladimirov derivatives}
+\author{Ziming Ji}
+ 
+\maketitle
+ 
+\begin{section}{Derivative of the $\chi$ character}
+It seems to me that there are two ways to do the calculation: one is to split $\mathbb{Q}_p$ into different domains($\xi \mathbb{U}_p$) and do the integral of $\chi$; the other is to decompose the $\chi$ character function into piece-wise constant functions $\gamma_n$ and apply the V-derivatives on them.
+
+\begin{paragraph}{a) Splitting $\mathbb{Q}_p$}
+
+\begin{equation}
+D^s_y \chi(k_n y)=\frac{1}{\Gamma_p (-s)} \int\limits _{\mathbb{Q}_p}dx \frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{|x-p^{n-m}y_0|_p^{1+s}}
+\end{equation}
+Where $k_n=p^{-n}$ and $y=p^{n-m} y_0$ with $m\geq 1$(other wise $\chi$ will be a constant function and the derivative is zero).\\
+Useful integrals are:
+\begin{equation}
+\int\limits_{\xi \mathbb{U}_p}dx\chi(x)=|\xi|_p(\gamma_0(\xi)-\frac{1}{p}\gamma_0(p\xi))
+=\begin{cases}
+|\xi|_p(1-\frac{1}{p}), &v_p(\xi)\geq 0\\
+-1,  &v_p(\xi) = -1\\
+0,  &v_p(\xi)< -1
+\end{cases}
+\end{equation}
+Consider the integral in each $x\in p^l \mathbb{U}_p$ block($x=p^l x_0$ where $x_0\in \mathbb{U}_p$) and we have 3 parts:\\
+First, for $l<n-m$, we have $|x-y|_p=|x|_p=p^{-l}$ and the integral becomes:
+\begin{equation}
+\begin{split}
+&\quad\frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} \int\limits _{p^l \mathbb{U}_p}dx \frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{p^{-l(1+s)}}\\
+&= \frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} \int\limits _{p^{l-n} \mathbb{U}_p}dz |p^n|_p \frac{\chi(z) - \chi( p^{-m}y_0)}{p^{-l(1+s)}} \\
+&= \frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} p^{-n} \frac{0 - \chi( p^{-m}y_0)}{p^{-l(1+s)}} (1-\frac{1}{p}) |p^{l+n}|_p \\
+&= \frac{1}{\Gamma_p(-s)}\sum_{l=-\infty}^{n-m-1} - \chi( p^{-m}y_0)(1-\frac{1}{p})p^{ls}\\
+&= \frac{- \chi( p^{-m}y_0)}{\Gamma_p(-s)} \frac{p-1}{p^s-1} p^{s(n-m)-1}.
+\end{split}
+\end{equation}
+The second part, $l=n-m$, is more complicated. Note that $\mathbb{U}_p=\{a_0\}+p\mathbb{Z}_p$, where $a_0$ is the first digit of numbers in $\mathbb{U}_p$. So we can do integrals in this way as well: 
+\begin{equation}
+\int\limits_{\mathbb{U}_p}dy=|\{a_0\}|\times\int\limits_{p\mathbb{Z}_p}dx=(p-1)|p|_p=1-\frac{1}{p}.
+\end{equation} 
+In this sense we can do the splitting infinitely as $p^{n-m}(\{a_0\}+\{a_1\}+\{a_2\}+\{a_3\}+...+\{a_{n-1}\}+p^n\mathbb{Z}_p)$, and the integral is equal to$(p-1)p^{n-1}|p^n|_p=1-\frac{1}{p}$ correctly. \\
+\\Thus the integral region $p^{n-m}\mathbb{U}_p$ can be split into $p^{n-m}(\{a_0\}+\{a_1\}+\{a_2\}+\{a_3\}+...+\{a_{n-1}\}+p^n\mathbb{Z}_p)$. For a given $y_0\in\mathbb{U}_p$ and all $x_0\in\mathbb{U}_p$, there is 1 case where they have the same first digit(where $|x_0-y_0|_p$ is determined by following digits) and $p-2$ cases where they have different first digits(where $|x_0-y_0|_p=1$) ; there is 1 case where they have the same second digit(where $|x_0-y_0|_p$ is determined by following digits) and $p-1$ cases where they have different second digits(where $|x_0-y_0|_p=p^{-1}$); there is 1 case where they have the same third digit(where $|x_0-y_0|_p$ is determined by following digits) and $p-1$ cases where they have different third digits(where $|x_0-y_0|_p=p^{-2}$);...Continue this spiting till $n\to\infty$ and we should obtain the summation form of the integral. \\
+\\Note that here different digits are weighted by $\chi(p^{-n}x)=\chi(p^{-m}x_0)$ and the summation is trickier. Consider for example for a \textbf{particular} first digit of $x_0$, $a_0\neq b_0$, which is the first digit of $y_0$. Without any pre-factor and constant term, the integral is:
+\begin{equation}
+\begin{split}
+&\quad \int\limits_{p\mathbb{Z}_p}dx_0\frac{\chi(p^{-m}(a_0+a_1 p+...))}{|x_0-y_0|_p^{1+s}} \\
+&=\int\limits_{\mathbb{Z}_p}dx_1|p|_p\chi(p^{-m}a_0)\chi(p^{-m+1}x_1)\\
+&=\frac{S_0}{p} \chi(p^{-m}a_0).
+\end{split}
+\end{equation} 
+We define $S_0$ to be the remaining integral of $\chi(p^{-m+1}x_1)$. Then we do the summation over all $a_0\neq b_0$:
+\begin{equation}
+\begin{split}
+&\quad \sum\limits^{p-1}_{a_0=1,\neq b_0} \frac{S_0}{p} \chi(p^{-m}a_0) \\
+&=\frac{S_0}{p}(\frac{e^{2\pi i p^{1-m}-1}}{e^{2\pi i p^{-m}}-1}-1-\chi(p^{-m}b_0)) \\
+&=\frac{S_0}{p}(\Sigma_p(m)-\chi(p^{-m}b_0)-1).
+\end{split}
+\end{equation}
+This discussion is valid for all digits, except that for not the first digits we have summations that start from $a_i=0$ and the summation of $\chi$ is $(\Sigma_p(m)-\chi(p^{-m}b_i))$ for $i\geq 1$. Then including all the factors and constant terms, our integral is:
+\begin{equation}
+\begin{aligned}
+&\frac{1}{\Gamma_p(-s)} \int\limits _{p^{n-m} \mathbb{U}_p}dx \frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{|p^{n-m}|_p^{1+s}|x_0-y_0|_p^{1+s}}\\
+&=\frac{1}{\Gamma_p(-s)} \int\limits _{\mathbb{U}_p}dx_0 \frac{|p^{n-m}|_p}{|p^{n-m}|_p^{1+s}} \frac{\chi( p^{-m} x_0) - \chi( p^{-m}y_0)}{|x_0-y_0|_p^{1+s}}\\
+&=\frac{p^{(n-m)s}}{\Gamma_p(-s)} \int\limits _{\mathbb{U}_p}dx_0 \frac{\chi( p^{-m} x_0) - \chi( p^{-m}y_0)}{|x_0-y_0|_p^{1+s}}\\
+&=\frac{p^{(n-m)s}}{\Gamma_p(-s)} (\sum\limits_{a_0=1,\neq b_0}^{p-1}\int\limits _{p\mathbb{Z}_p}dx_0 \frac{\chi( p^{-m} a_0)\chi( p^{-m+1} x_1) - \chi( p^{-m}y_0)}{|p^0|_p^{1+s}}\\
+&\qquad+(a_0=b_0)\text{ terms})\\
+&=\frac{p^{(n-m)s}}{\Gamma_p(-s)} (\sum\limits_{a_0=1,\neq b_0}^{p-1}\int\limits _{\mathbb{Z}_p}dx_1|p|_p \frac{\chi( p^{-m} a_0)\chi( p^{-m+1} x_1) - \chi( p^{-m}y_0)}{|p^0|_p^{1+s}}\\
+&\qquad+(a_0=b_0)\text{ terms})\\
+&=\frac{p^{(n-m)s}}{\Gamma_p(-s)}(\frac{\Sigma_p(m)-\chi(p^{-m}b_0)-1}{p}\int\limits_{\mathbb{Z}_p}dx_1\chi(p^{-m+1}x_1)\\
+&\quad-\frac{p-2}{p}\int\limits_{\mathbb{Z}_p}dx_1\chi(p^{-m}y_0)+(a_0=b_0)\text{ terms}).
+\end{aligned}
+\end{equation}
+The first integral depends on the value of $m$ and the result is:
+\begin{equation}
+\begin{aligned}
+&\frac{p^{(n-m)s}}{\Gamma_p(-s)}((\Sigma_p(m)-\chi(p^{-m}b_0)-1)p^{-m}\times\left( 
+  \begin{cases}
+    p^{m-1}(1-\frac{1}{p}), & \text{for } m=1 \\
+    -1, & \text{for } m=2 \\
+    0, & \text{for } m>2
+  \end{cases}
+   \right)\\
+&\quad-\frac{p-2}{p}\chi(p^{-m}y_0)+(a_0=b_0)\text{ terms})
+\end{aligned}
+\end{equation}
+Similarly, this $(a_0=b_0)\text{ terms}$ equals to:
+\begin{equation}
+\begin{aligned}
+&\sum\limits_{a_1=0,\neq b_1}^{p-1}\int\limits _{p^2\mathbb{Z}_p}dx_0 \frac{\chi( p^{-m} (b_0+pa_1))\chi( p^{-m+2} x_2) - \chi( p^{-m}y_0)}{|p^1|_p^{1+s}}\\
+&\qquad+(a_1=b_1)\text{ terms}\\
+&=\chi(p^{-m}b_0)(\Sigma_p(m-1)-\chi(p^{-m+1}b_1))\int\limits _{\mathbb{Z}_p}dx_2|p^2|_p \frac{\chi( p^{-m+2} x_2) }{p^{-(1+s)}}\\
+&\qquad-(p-1)\int\limits_{\mathbb{Z}_p}dx_2|p^2|_p\frac{\chi( p^{-m}y_0)}{p^{-(1+s)}}+(a_1=b_1)\text{ terms}\\
+&=\chi(p^{-m}b_0)(\Sigma_p(m-1)-\chi(p^{-m+1}b_1))p^{s-m+1}\times\left( 
+  \begin{cases}
+    p^{m-2}(1-\frac{1}{p}), & \text{for } ,1\leq m \leq 2 \\
+    -1, & \text{for } m=3 \\
+    0, & \text{for } m>3
+  \end{cases}
+   \right)\\
+&\qquad-(p-1)p^{s-1}\chi(p^{-m}y_0)+(a_1=b_1)\text{ terms}.
+\end{aligned}
+\end{equation}
+From here it is clear that the $(a_i=b_i)$ term for arbitrary $i$ is:
+\begin{equation}
+\begin{aligned}
+&\chi(p^{-m}(b_0+b_1p+...+b_{i}p^{i}))(\Sigma_p(m-1-i)-\chi(p^{-m+1+i}b_{i+1}))p^{(i+1)(s+1)-m}\\
+&\qquad\times\left( 
+  \begin{cases}
+    p^{m-2-i}(1-\frac{1}{p}), & \text{for } ,1\leq m \leq 2+i \\
+    -1, & \text{for } m=3+i \\
+    0, & \text{for } m>3+i
+  \end{cases}
+   \right) -(p-1)p^{s(i+1)-1}\chi(p^{-m}y_0)+(a_{i+1}=b_{i+1})\text{ terms}.
+\end{aligned}
+\end{equation} 
+Now let's do the summation for all digits(over the whole integral region) term by term:
+\begin{itemize}
+\item First, the simple ones, $\chi(p^{-m}y_0)$ terms:
+\begin{equation}
+\begin{aligned}
+&\quad-\frac{p^{(n-m)s}}{\Gamma_p(-s)}\chi(p^{-m}y_0)(\frac{p-2}{p}+\sum\limits_{i=0}^{\infty}(p-1)p^{s(i+1)-1})\\
+&=-\frac{p^{(n-m)s}}{\Gamma_p(-s)}\chi(p^{-m}y_0)\frac{2-p-p^s+(p-1)p^{(2+\infty)s}}{p(p^s-1)}.
+\end{aligned}
+\end{equation}
+\end{itemize}
+The last term, $l>n-m$, is:
+\begin{equation}
+\begin{split}
+&\quad\frac{1}{\Gamma_p (-s)} \sum_{l=n-m+1}^{\infty} \int\limits _{p^l \mathbb{U}_p}dx\frac{\chi( p^{-n} x) - \chi( p^{-m}y_0)}{|p^{n-m}y_0|_p^{1+s}}\\
+&=\frac{1}{\Gamma_p (-s)} p^{(n-m)(1+s)} \sum_{l=n-m+1}^{\infty} \int\limits _{p^l \mathbb{U}_p}dx (\chi( p^{-n} x) - \chi( p^{-m}y_0))\\
+&=\frac{1}{\Gamma_p (-s)} p^{(n-m)(1+s)} (\sum_{l=n-m+1}^{\infty} \int\limits _{p^l \mathbb{U}_p}dx \chi( p^{-n} x) - \sum_{l=n-m+1}^{\infty} p^{-l}(1-\frac{1}{p})\chi( p^{-m}y_0))\\
+&=\frac{1}{\Gamma_p (-s)} p^{(n-m)(1+s)} (\sum_{l=n-m+1}^{\infty} \int\limits _{p^l \mathbb{U}_p}dx \chi( p^{-n} x) - p^{-1+m-n}\chi( p^{-m}y_0))
+\end{split}
+\end{equation}
+While this integral $\sum_{l=n-m+1}^{\infty}\int\limits _{p^l \mathbb{U}_p}dx \chi( p^{-n} x)$ should be considered in two cases: \\
+\begin{itemize}
+\item When $m=1$, this is $\sum^\infty_{l=n}p^l(1-\frac{1}{p})=p^{-n}$;
+\item When $m\geq 2$, this is $-p^{-n}+\sum^\infty_{l=n}p^l(1-\frac{1}{p})=0$.
+\end{itemize}
+So in this region, the integral becomes:
+\begin{equation}
+\begin{cases}
+\frac{1}{\Gamma_p (-s)} p^{(n-m)s-1} (p^{1-m} - \chi( p^{-m}y_0)), \quad &m=1\\
+\frac{-1}{\Gamma_p (-s)} p^{(n-m)s-1} \chi( p^{-m}y_0), \quad &m\geq 2
+\end{cases}
+\end{equation}
+\end{paragraph}
+
+\end{section}
+
+\end{document}
