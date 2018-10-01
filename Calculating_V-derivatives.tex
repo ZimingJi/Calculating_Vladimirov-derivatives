@@ -63,14 +63,23 @@ The second part, $l=n-m$, is more complicated. Note that $\mathbb{U}_p=\{a_0\}+p
 \end{equation} 
 In this sense we can do the splitting infinitely as $p^{n-m}(\{a_0\}+\{a_1\}+\{a_2\}+\{a_3\}+...+\{a_{n-1}\}+p^n\mathbb{Z}_p)$, and the integral is equal to$(p-1)p^{n-1}|p^n|_p=1-\frac{1}{p}$ correctly. \\
 \\Thus the integral region $p^{n-m}\mathbb{U}_p$ can be split into $p^{n-m}(\{a_0\}+\{a_1\}+\{a_2\}+\{a_3\}+...+\{a_{n-1}\}+p^n\mathbb{Z}_p)$. For a given $y_0\in\mathbb{U}_p$ and all $x_0\in\mathbb{U}_p$, there is 1 case where they have the same first digit(where $|x_0-y_0|_p$ is determined by following digits) and $p-2$ cases where they have different first digits(where $|x_0-y_0|_p=1$) ; there is 1 case where they have the same second digit(where $|x_0-y_0|_p$ is determined by following digits) and $p-1$ cases where they have different second digits(where $|x_0-y_0|_p=p^{-1}$); there is 1 case where they have the same third digit(where $|x_0-y_0|_p$ is determined by following digits) and $p-1$ cases where they have different third digits(where $|x_0-y_0|_p=p^{-2}$);...Continue this spiting till $n\to\infty$ and we should obtain the summation form of the integral. \\
-\\Note that here different digits are weighted by $\chi(p^{-n}x)=\chi(p^{-m}x_0)$ and the summation is trickier. Consider for example for a \textbf{particular} first digit of $x_0$, $a_0$. Without any pre-factor and constant term, the integral is:
+\\Note that here different digits are weighted by $\chi(p^{-n}x)=\chi(p^{-m}x_0)$ and the summation is trickier. Consider for example for a \textbf{particular} first digit of $x_0$, $a_0\neq b_0$, which is the first digit of $y_0$. Without any pre-factor and constant term, the integral is:
 \begin{equation}
 \begin{split}
-\quad \int\limits_{p\mathbb{Z}_p}dx_0\frac{\chi(p^{-m}(a_0+a_1 p+...))}{|x_0-y_0|_p^{1+s}} \\
+&\quad \int\limits_{p\mathbb{Z}_p}dx_0\frac{\chi(p^{-m}(a_0+a_1 p+...))}{|x_0-y_0|_p^{1+s}} \\
 &=\int\limits_{\mathbb{Z}_p}dx_1\chi(p^{-m}a_0)\chi(p^{-m+1}x_1)\\
-&=
+&=S_0 \chi(p^{-m}a_0).
 \end{split}
 \end{equation} 
+We define $S_0$ to be the remaining integral of $\chi(p^{-m+1}x_1)$. Then we do the summation over all $a_0\neq b_0$:
+\begin{equation}
+\begin{split}
+&\quad \sum\limits^{p-1}_{a_0=1,\neq b_0} S_0 \chi(p^{-m}a_0) \\
+&=S_0(\frac{e^{2\pi i p^{1-m}-1}}{e^{2\pi i p^{-m}}-1}-1-\chi(p^{-m}b_0)) \\
+&=S_0(\Sigma_p(m)-\chi(p^{-m}b_0)-1).
+\end{split}
+\end{equation}
+This discussion is valid for all digits, except that for not the first digits we have summations that start from $a_i=0$ and the result is $S_i(\Sigma_p(m)-\chi(p^{-m}b_i))$ for $i\geq 1$.\\
 The derivative is:
 \begin{equation}
 \begin{split}
