@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15847,        494]
-NotebookOptionsPosition[     13068,        434]
-NotebookOutlinePosition[     13424,        450]
-CellTagsIndexPosition[     13381,        447]
+NotebookDataLength[     18810,        597]
+NotebookOptionsPosition[     15583,        529]
+NotebookOutlinePosition[     15939,        545]
+CellTagsIndexPosition[     15896,        542]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -429,6 +429,101 @@ Cell[BoxData[
  CellChangeTimes->{3.7474223380219593`*^9},
  CellLabel->
   "Out[132]=",ExpressionUUID->"38cdc2cf-a48e-4f08-84a0-88705ecae8a4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        FractionBox["1", "p"]}], ")"}], 
+      SuperscriptBox["p", 
+       RowBox[{"s", " ", "l"}]]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"l", ",", 
+       RowBox[{"-", "\[Infinity]"}], ",", 
+       RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}], "//", 
+  "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.7474994698984437`*^9, 3.747499502362718*^9}},
+ CellLabel->
+  "In[134]:=",ExpressionUUID->"696e09f5-6f06-4bb5-8c81-2c0a88c3bf90"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "p"}], ")"}], " ", 
+    SuperscriptBox["p", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      RowBox[{"n", " ", "s"}]}]]}], 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", 
+    SuperscriptBox["p", "s"]}]]}]], "Output",
+ CellChangeTimes->{{3.747499498490257*^9, 3.7474995026439843`*^9}},
+ CellLabel->
+  "Out[134]=",ExpressionUUID->"2109787d-fbec-4aa3-adcd-912f5fa0b296"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "p"}], ")"}], " ", 
+      SuperscriptBox["p", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"n", " ", "s"}]}]]}], 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      SuperscriptBox["p", "s"]}]]}], "-", 
+   SuperscriptBox["p", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"n", "-", "1"}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{"1", "+", "s"}], ")"}]}], "-", "n"}]]}], "//", 
+  "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.7474996180827827`*^9, 3.7474996561186438`*^9}},
+ CellLabel->
+  "In[136]:=",ExpressionUUID->"4c384293-7055-4deb-89bb-920022483255"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["p", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "s"}]}]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      SuperscriptBox["p", 
+       RowBox[{"1", "+", "s"}]]}], ")"}]}], 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", 
+    SuperscriptBox["p", "s"]}]]}]], "Output",
+ CellChangeTimes->{{3.7474996487240124`*^9, 3.7474996567077713`*^9}},
+ CellLabel->
+  "Out[136]=",ExpressionUUID->"3cbffb91-407e-4777-bf27-0f49a3373282"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -494,6 +589,14 @@ Cell[11885, 387, 460, 16, 54, "Output",ExpressionUUID->"f09c94f0-efcc-4874-8e15-
 Cell[CellGroupData[{
 Cell[12382, 408, 318, 9, 28, "Input",ExpressionUUID->"217b5d81-a266-461f-82b0-db8fd774e3a3"],
 Cell[12703, 419, 337, 11, 32, "Output",ExpressionUUID->"38cdc2cf-a48e-4f08-84a0-88705ecae8a4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13077, 435, 572, 18, 63, "Input",ExpressionUUID->"696e09f5-6f06-4bb5-8c81-2c0a88c3bf90"],
+Cell[13652, 455, 485, 16, 54, "Output",ExpressionUUID->"2109787d-fbec-4aa3-adcd-912f5fa0b296"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14174, 476, 753, 26, 66, "Input",ExpressionUUID->"4c384293-7055-4deb-89bb-920022483255"],
+Cell[14930, 504, 625, 21, 56, "Output",ExpressionUUID->"3cbffb91-407e-4777-bf27-0f49a3373282"]
 }, Open  ]]
 }, Open  ]]
 }

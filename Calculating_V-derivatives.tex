@@ -28,7 +28,7 @@
  
 \maketitle
  
-\begin{section}{Derivative of the $\chi$ character}
+\section{Derivative of the $\chi$ character}
 Calculating Vladimirov derivative of $\chi(k_ny)$ where $k_n=p^{-n}$:
 \begin{equation}
 \begin{aligned}
@@ -40,7 +40,24 @@ D^s_y \chi(k_n y)&=\frac{1}{\Gamma_p (-s)} \int\limits _{\mathbb{Q}_p}dx \frac{\
 \end{aligned}
 \end{equation}
 
-
-\end{section}
-
+\section{Check shift invariance of a general $p$-adic integral}
+Define a general integral over $p$-adic number field as:
+\begin{equation}
+\begin{aligned}
+&\quad \int\limits_{\mathbb{Q}_p} dx f(|x|_p)=\sum\limits_{l=-\infty}^{\infty}\int\limits_{p^l\mathbb{U}_p}dx f(p^{-l})
+\end{aligned}
+\end{equation}
+A shift of the integral variable gives:
+\begin{equation}
+\begin{aligned}
+&\quad \int\limits_{\mathbb{Q}_p} dx f(|x|_p)=\int\limits_{\mathbb{Q}_p} d(u-y) f(|u-y|_p) \quad\text{where}\quad u=x+y \\
+\end{aligned}
+\end{equation}
+Suppose that $d(u-y)=du$ when $y$ is constant. Then we can proceed by splitting $\mathbb{Q}_p$:
+\begin{equation}
+\begin{aligned}
+&\quad \int\limits_{\mathbb{Q}_p} d(u) f(|u-y|_p)=\sum\limits_{l=-\infty}^{\infty}\int\limits_{p^l\mathbb{U}_p}du f(|u-y|_p)
+\end{aligned}
+\end{equation}
+Note that we cannot write $|u-y|_p$ as $p^{-l}$ in each block any more. Suppose that $y=p^m(a_0+a_1 p+a_2 p^2+...)$
 \end{document}
