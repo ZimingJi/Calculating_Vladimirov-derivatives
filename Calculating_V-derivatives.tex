@@ -59,5 +59,26 @@ Suppose that $d(u-y)=du$ when $y$ is constant. Then we can proceed by splitting 
 &\quad \int\limits_{\mathbb{Q}_p} d(u) f(|u-y|_p)=\sum\limits_{l=-\infty}^{\infty}\int\limits_{p^l\mathbb{U}_p}du f(|u-y|_p)
 \end{aligned}
 \end{equation}
-Note that we cannot write $|u-y|_p$ as $p^{-l}$ in each block any more. Suppose that $y=p^m(a_0+a_1 p+a_2 p^2+...)$
+Note that we cannot write $|u-y|_p$ as $p^{-l}$ in each block any more. Suppose that $y=p^m(a_0+a_1 p+a_2 p^2+...)$, we have:
+\begin{equation}
+\begin{aligned}
+\sum\limits_{l=-\infty}^{\infty}\int\limits_{p^l\mathbb{U}_p}du f(|u-y|_p)&=\sum\limits_{l=-\infty}^{m-1}\int\limits_{p^l\mathbb{U}_p}du f(p^{-l})+\sum\limits_{l=m+1}^{\infty}\int\limits_{p^l\mathbb{U}_p}du f(p^{-m})+(l=m)\text{ term}\\
+&=\sum\limits_{l=-\infty}^{m-1}f(p^{-l})(1-\frac{1}{p})p^{-l}+f(p^{-m})p^{-(m+1)}+(l=m)\text{ term}
+\end{aligned}
+\end{equation}
+This ``contact term" can be written as:
+\begin{equation}
+\begin{aligned}
+&\quad\int\limits_{p^m\mathbb{U}_p}du f(|u-y|_p)=\sum\limits_{b_0=1,\neq a_0}^{p-1}\int\limits_{p^{m+1}\mathbb{U}_p}du f(p^{-m})+(a_0=b_0)\text{ term}\\
+&=f(p^{-m})(p-2)(1-\frac{1}{p})p^{-(m+1)}+\sum\limits_{b_1=0,\neq a_1}^{p-1}\int\limits_{p^{m+2}\mathbb{U}_p}du f(p^{-(m+1)})+(a_1=b_1)\text{ term}\\
+&=f(p^{-m})(p-2)(1-\frac{1}{p})p^{-(m+1)}+\sum\limits_{l=m+1}^{\infty}f(p^{-l})(1-\frac{1}{p})^2 p^{-(l+1)}
+\end{aligned}
+\end{equation}
+In the end, all these terms add up to the integral after shift:
+\begin{equation}
+\begin{aligned}
+f(p^{-m})p^{-(m+1)}[(p-2)(1-\frac{1}{p})+1]+\sum\limits_{l=-\infty}^{m-1}f(p^{-l})(1-\frac{1}{p})p^{-l}+\sum\limits_{l=m+1}^{\infty}f(p^{-l})(1-\frac{1}{p})^2 p^{-l}
+\end{aligned}
+\end{equation}
+This is not the integral before shift. What happened?????????
 \end{document}
