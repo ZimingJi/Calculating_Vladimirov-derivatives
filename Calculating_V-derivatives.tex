@@ -44,7 +44,7 @@ D^s_y \chi(k_n y)&=\frac{1}{\Gamma_p (-s)} \int\limits _{\mathbb{Q}_p}dx \frac{\
 Define a general integral over $p$-adic number field as:
 \begin{equation}
 \begin{aligned}
-&\quad \int\limits_{\mathbb{Q}_p} dx f(|x|_p)=\sum\limits_{l=-\infty}^{\infty}\int\limits_{p^l\mathbb{U}_p}dx f(p^{-l})
+&\quad \int\limits_{\mathbb{Q}_p} dx f(|x|_p)=\sum\limits_{l=-\infty}^{\infty}\int\limits_{p^l\mathbb{U}_p}dx f(p^{-l})=\sum\limits_{l=-\infty}^{\infty}f(p^{-l})(1-\frac{1}{p})p^{-l}
 \end{aligned}
 \end{equation}
 A shift of the integral variable gives:
@@ -88,5 +88,13 @@ f(p^{-n})p^{-(n+1)}[(p-2)(1-\frac{1}{p})+1]+\sum\limits_{l=-\infty}^{n-1}f(p^{-l
 \end{aligned}
 \end{equation}
 Are these two compatible? No, at least not for arbitrary $f$. \\
-However, we should only consider a subset of function $f$, which has convergent integral on $\mathbb{Q}_p$.
+However, we should only consider a subset of function $f$, which has convergent integral on $\mathbb{Q}_p$. Using a test function
+\begin{equation}
+f(x)=
+\begin{cases}
+1\quad x\in \mathbb{Z}_p\\
+0\quad \text{otherwise},
+\end{cases}
+\end{equation}
+one can show that the most severe discrepancy lives in the 
 \end{document}
