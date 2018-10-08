@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300) (preloaded format=pdflatex 2017.5.1)  6 OCT 2018 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300) (preloaded format=pdflatex 2017.5.1)  7 OCT 2018 22:04
 entering extended mode
 **./Calculating_V-derivatives.tex
 (Calculating_V-derivatives.tex
@@ -195,11 +195,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (Calculating_V-deriva
 tives.aux) ) 
 Here is how much of TeX's memory you used:
- 1746 strings out of 493328
- 21595 string characters out of 3139111
- 88173 words of memory out of 3000000
- 5295 multiletter control sequences out of 15000+200000
- 13036 words of font info for 51 fonts, out of 3000000 for 9000
+ 1747 strings out of 493328
+ 21612 string characters out of 3139111
+ 87173 words of memory out of 3000000
+ 5296 multiletter control sequences out of 15000+200000
+ 13343 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  27i,9n,32p,285b,190s stack positions out of 5000i,500n,10000p,200000b,50000s
 <E:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.
@@ -213,7 +213,7 @@ amsfonts/cm/cmr6.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmr8.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Calculating_V-derivatives.pdf (2 pages, 124454 bytes).
+Output written on Calculating_V-derivatives.pdf (2 pages, 123363 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

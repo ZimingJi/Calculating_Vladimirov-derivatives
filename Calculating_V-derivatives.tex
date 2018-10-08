@@ -41,6 +41,7 @@ D^s_y \chi(k_n y)&=\frac{1}{\Gamma_p (-s)} \int\limits _{\mathbb{Q}_p}dx \frac{\
 \end{equation}
 
 \section{Check shift invariance of a general $p$-adic integral}
+\subsection{Integrand depending only on the $p$-adic norm}
 Define a general integral over $p$-adic number field as:
 \begin{equation}
 \begin{aligned}
@@ -69,32 +70,17 @@ Note that we cannot write $|u-y|_p$ as $p^{-l}$ in each block any more. Suppose 
 This ``contact term" can be written as:
 \begin{equation}
 \begin{aligned}
-&\quad\int\limits_{p^m\mathbb{U}_p}du f(|u-y|_p)=\sum\limits_{b_0=1,\neq a_0}^{p-1}\int\limits_{p^{m+1}\mathbb{U}_p}du f(p^{-m})+(a_0=b_0)\text{ term}\\
-&=f(p^{-m})(p-2)(1-\frac{1}{p})p^{-(m+1)}+\sum\limits_{b_1=0,\neq a_1}^{p-1}\int\limits_{p^{m+2}\mathbb{U}_p}du f(p^{-(m+1)})+(a_1=b_1)\text{ term}\\
-&=f(p^{-m})(p-2)(1-\frac{1}{p})p^{-(m+1)}+\sum\limits_{l=m+1}^{\infty}f(p^{-l})(1-\frac{1}{p})^2 p^{-(l+1)}
+&\quad\int\limits_{p^m\mathbb{U}_p}du f(|u-y|_p)=\sum\limits_{b_0=1,\neq a_0}^{p-1}\int\limits_{p^{m+1}\mathbb{Z}_p}du f(p^{-m})+(a_0=b_0)\text{ term}\\
+&=f(p^{-m})(p-2)p^{-(m+1)}+\sum\limits_{b_1=0,\neq a_1}^{p-1}\int\limits_{p^{m+2}\mathbb{Z}_p}du f(p^{-(m+1)})+(a_1=b_1)\text{ term}\\
+&=f(p^{-m})(p-2)p^{-(m+1)}+\sum\limits_{l=m+1}^{\infty}f(p^{-l})(1-\frac{1}{p}) p^{-l}
 \end{aligned}
 \end{equation}
 In the end, all these terms add up to the integral after shift:
 \begin{equation}
 \begin{aligned}
-f(p^{-m})p^{-(m+1)}[(p-2)(1-\frac{1}{p})+1]+\sum\limits_{l=-\infty}^{m-1}f(p^{-l})(1-\frac{1}{p})p^{-l}+\sum\limits_{l=m+1}^{\infty}f(p^{-l})(1-\frac{1}{p})^2 p^{-l}
+f(p^{-m})p^{-(m+1)}(p-1)+\sum\limits_{l=-\infty}^{m-1}f(p^{-l})(1-\frac{1}{p})p^{-l}+\sum\limits_{l=m+1}^{\infty}f(p^{-l})(1-\frac{1}{p}) p^{-l}
 \end{aligned}
 \end{equation}
-This is not the integral before shift. What happened?????????\\
-If we shift $z=p^n(c_0+c_1 p+c_2 p^2+...)$, the integral will be:
-\begin{equation}
-\begin{aligned}
-f(p^{-n})p^{-(n+1)}[(p-2)(1-\frac{1}{p})+1]+\sum\limits_{l=-\infty}^{n-1}f(p^{-l})(1-\frac{1}{p})p^{-l}+\sum\limits_{l=n+1}^{\infty}f(p^{-l})(1-\frac{1}{p})^2 p^{-l}
-\end{aligned}
-\end{equation}
-Are these two compatible? No, at least not for arbitrary $f$. \\
-However, we should only consider a subset of function $f$, which has convergent integral on $\mathbb{Q}_p$. Using a test function
-\begin{equation}
-f(x)=
-\begin{cases}
-1\quad x\in \mathbb{Z}_p\\
-0\quad \text{otherwise},
-\end{cases}
-\end{equation}
-one can show that the most severe discrepancy lives in the 
+This is exactly $\sum\limits_{l=-\infty}^{\infty}f(p^{-l})(1-\frac{1}{p})p^{-l}$, the integral before shifting.
+\subsection{Integrand depending also on $p$-adic digits}
 \end{document}
