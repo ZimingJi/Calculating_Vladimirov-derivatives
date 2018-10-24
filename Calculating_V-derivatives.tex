@@ -39,7 +39,12 @@ D^s_y \chi(k_n y)&=\frac{1}{\Gamma_p (-s)} \int\limits _{\mathbb{Q}_p}dx \frac{\
 &=\frac{1}{\Gamma_p (-s)} \chi( p^{-n} y)\left(p^{ns}\Gamma_p(-s)\right)=p^{ns}\chi(k_n y)
 \end{aligned}
 \end{equation}
-
+We notice that two ways of regulating the integral are equivalent:
+\begin{itemize}
+\item Including $(- \chi( p^{-n}y))$ in the numerator;
+\item ``Analytic continuation" of $\Gamma_p(-s)=\int\limits_{\mathbb{Q}_p}\frac{dx}{|x|_p}\chi(x)|x|_p^{-s}$ to the region $-s>0$ by $\Gamma_p(s)=\frac{\zeta_p(s)}{\zeta_p(1-s)}$.
+\end{itemize}
+It is really like defining all the quantities modulo $\sum\limits_{-\infty}^\infty p^{ls}$.
 \section{Check shift invariance of a general $p$-adic integral}
 \subsection{Integrand depending only on the $p$-adic norm}
 Define a general integral over $p$-adic number field as:
