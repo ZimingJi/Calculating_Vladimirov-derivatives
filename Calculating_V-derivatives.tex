@@ -2,24 +2,7 @@
  
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
- 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
- 
-\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
-\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
-\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
-\newenvironment{problem}[2][Problem]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
-\newenvironment{question}[2][Question]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
-\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\usepackage{url}
  
 \begin{document}
  
@@ -135,4 +118,13 @@ Then
 \Gamma_\infty(s)\prod\limits_p\Gamma_p(s)=\frac{\zeta_\infty(s)}{\zeta_\infty(1-s)}\prod\limits_p\frac{\zeta_p(s)}{\zeta_p(1-s)}=\frac{\xi(s)}{\xi(1-s)}=1.
 \end{equation}
 Note that indicator functions($e^{-\pi x^2}$ is an analogue in Reals?) are their own Fourier transforms.
+\section{Gauss integral}
+\begin{equation}
+\int\limits_{\mathbb{Q}_p}\chi(\alpha x^2+\beta x)dx=\lambda_p(\alpha)|2\alpha|_p^{-\frac{1}{2}}\chi(\frac{\beta^2}{4\alpha}), \quad \alpha\neq 0,
+\end{equation}
+where $\lambda_p(\alpha)$ is an arithmetic complex-valued function \cite{Vladimirov:1994zz}.
+
+\newpage
+\bibliographystyle{utphys}
+\bibliography{Calculating_V-derivatives}
 \end{document}
