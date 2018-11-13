@@ -28,6 +28,12 @@ We notice that two ways of regulating the integral are equivalent:
 \item ``Analytic continuation" of $\Gamma_p(-s)=\int\limits_{\mathbb{Q}_p}\frac{dx}{|x|_p}\chi(x)|x|_p^{-s}$ to the region $-s>0$ by $\Gamma_p(s)=\frac{\zeta_p(s)}{\zeta_p(1-s)}$.
 \end{itemize}
 It is really like defining all the quantities modulo $\sum\limits_{-\infty}^\infty p^{ls}$.
+\section{Is V derivative equipped with a Leibniz rule and/or a product rule?}
+Let's find the answer.
+
+Sadly, there is no general ordinary product rule. But a reduced version comes out.
+
+What about a Leibniz rule?
 \section{Check shift invariance of a general $p$-adic integral}
 \subsection{Integrand depending only on the $p$-adic norm}
 Define a general integral over $p$-adic number field as:
@@ -90,7 +96,7 @@ where $\left(\frac{k}{p}\right)_L$ is the Legendre symbol, $u$ equals $1$ for $p
 \end{equation}
 We want to know about the Fourier transform of the characteristic function itself:
 \begin{equation}
-\int\limits_{\mathbb{Q}_p} dk \chi(kx)\chi(k)=0.
+\int\limits_{\mathbb{Q}_p} dk \chi(kx)\chi(ky)=\frac{1}{|x+y|}\Gamma_p(1).
 \end{equation}
 \subsection{A simple example of Adelic product relation}
 We need to know the Mellin transform of $e^{-\pi x^2}$ in $\mathbb{R}$ and $\gamma_0(x)$ the indicator(or characteristic) function of $\mathbb{Z}_p$ in their respective fields:
